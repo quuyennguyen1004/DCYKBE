@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Webtt.Models.Product>
+
+@{
+    ViewData["Title"] = "DaiNep";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>DaiNep</h1>
+
+<div class="w-clear">
+    <div class="slick_5 slick-initialized slick-slider">
+        <div aria-live="polite" class="slick-list draggable">
+            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                @foreach (var item in Model)
+                {
+                    <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                         style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+
+                        <div class="box-sp w-clear">
+                            <a href="" tabindex="-1">
+                                <div class="images">
+                                    <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                </div>
+                                <div class="new">
+                                </div>
+                            </a>
+                            <div class="info w-clear">
+                                <div class="w-clear">
+                                    <a href="" tabindex="-1">
+                                        <h3>
+                                            @item.ProductName
+                                        </h3>
+                                    </a>
+                                    <div class="info-gia flex">
+                                        <div class="gia">
+                                            Giá:
+                                            <span>@item.ProductPrice</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

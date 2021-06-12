@@ -1,0 +1,124 @@
+﻿@model IEnumerable<Webtt.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@*<h1>Index</h1>
+
+    <p>
+        <a class="btn btn-primary" asp-controller="Categories" asp-action="Create">Add</a>
+    </p>
+    <table class="table-bordered table">
+        <tr>
+            <th>Id</th>
+            <th>Catgory</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-action="Edit" asp-controller="Categories" asp-route-id="@item.CategoryId">Edit</a>|
+                    <a class="btn btn-primary " asp-action="Delete" asp-controller="Categories" asp-route-id="@item.CategoryId">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>*@
+<div class="Add">
+    <div class="Add-product">
+        <h2>Danh mục sản phẩm</h2>
+        <p>Thêm danh mục:</p>
+        <a asp-controller="Categories" asp-action="Create">
+            <i class="add-product fa fa-plus" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="details-product">
+    <div class="products">
+        <div class="cardHeader">
+            <div class="show">
+                <div class="show-item">
+                    <label>
+                        Show
+                        <select name="showItem" aria-controls="" class="customer-show">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-search">
+                    Search:
+                    <input type="search" class="filter-s">
+                </div>
+            </div>
+
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>ID</td>
+                    <td>Category Name</td>
+                    <td>Hành Động</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+            {
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>@item.CategoryId</td>
+                    <td>@item.CategoryName</td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Categories" asp-route-id="@item.CategoryId">
+                            <i class=" edit fa fa-pencil" aria-hidden="true"></i>
+                        </a>
+                        <a asp-action="Delete" asp-controller="Categories" asp-route-id="@item.CategoryId">
+                            <i class=" delete fa fa-trash" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <div class="control">
+            <ul class="numbers">
+                <li class="control-numbers">
+                    <a href="#" class="page-link">Trước</a>
+                </li>
+                <li class="control-numbers">
+                    <a href="#" class="page-link">
+                        1
+                    </a>
+                </li>
+                <li class="control-numbers">
+                    <a href="#" class="page-link">2</a>
+                </li>
+                <li class="control-numbers">
+                    <a href="#" class="page-link">3</a>
+                </li>
+                <li class="control-numbers">
+                    <a href="#" class="page-link">4</a>
+                </li>
+                <li class="control-numbers">
+                    <a href="#" class="page-link">5</a>
+                </li>
+                <li class="control-numbers">
+                    <a href="#" class="page-link">Sau</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

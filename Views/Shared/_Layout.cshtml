@@ -1,0 +1,665 @@
+﻿@*<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Webtt</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Webtt</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - Webtt - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+    </body>
+    </html>*@
+@* <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - MyApp</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyApp</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - MyApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+    </body>
+    </html> *@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./admin/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugin/fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    @* <link rel="stylesheet" href="/assets/css/css/banner.css">
+        <link rel="stylesheet" href="/assets/css/css/menu.css">
+        <link rel="stylesheet" href="/assets/css/css/contact.css">
+        <link rel="stylesheet" href="/assets/css/css/footer.css">
+        <link rel="stylesheet" href="/assets/css/css/content.css">
+        <link rel="stylesheet" href="/assets/css/css/slide.css"> *@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/banner.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/contact.css" />
+    <link rel="stylesheet" href="~/css/footer.css" />
+    <link rel="stylesheet" href="~/css/content.css" />
+    <link rel="stylesheet" href="~/css/slide.css" />
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="../assets/css/js/btn-top.js"></script>
+    <title>Trang chủ</title>
+
+</head>
+<body>
+    <header>
+      
+        <div class="Contact">
+            <div class="Contact_header">
+                <div class="Contact_header--l">
+                    <span class="w-clear diachi">
+                        <i class="fas fa-map-marker-alt"></i>
+                        849 Nguyễn Kiệm - Phường 3 - Quận Gò Vấp - TP.HCM
+                    </span>
+                </div>
+                <div class="Contact_header--r">
+                    <span class="email">
+                        <i class="far fa-envelope"></i> Email: dungcuytesaigon2402@gmail.com
+                    </span>
+                    <span class="w-clear ">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- banner -->
+        <div id="banner" class="">
+            <div class="banner w-clear wikis">
+                <div class="flex">
+                    <div class="banner-l">
+                        <a href="" class="logo ">
+                            <img src="~/img/82256_logo_vi.png" alt="DỤNG CỤ Y TẾ SÀI GÒN " />
+                        </a>
+                    </div>
+                    <div class="banner-mid">
+                        <a href="">
+                            <img src="~/img/51207_banner_vi.png" alt="Banner" class="banner_img 	" />
+                        </a>
+                        <form class="search" method="get">
+                            <input type="text" id="keyword" class="input" name="search" value="" placeHolder="Tìm kiếm sản phẩm ..." onkeypress="doEnter(event)" />
+                            <button type="submit" class="bt-search" data-toggle="tooltip" asp-action="Search" asp-controller="Home">Tìm kiếm</button>
+                        </form>
+                    </div>
+                    <div class="banner-right w-clear">
+                        <div class="door">
+                            Giờ mở cửa:
+                            <span>7 Day a week  8:00 - 21:00 </span>
+                        </div>
+                        <span class="hotline">
+                            <div class="">Hotline: </div>
+                            <div>
+                                <span>091 528 2266 </span>
+                                <span>- 093 885 2120</span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+        <div id="main">
+            <div id="header">
+                <ul id="nav">
+                    <li class="homepage">
+                        <a asp-action="Index" asp-controller="Home">Trang chủ</a>
+                    </li>
+                    <li><a href="about.html">Giới thiệu</a>
+                    <li>
+                        <a asp-action="Index" asp-controller="Home">Sản phẩm</a>
+                        <ul class="sub-nav">
+                            <li>
+                                <a asp-controller="Home" asp-action="ChuyenKhoa" >Dụng cụ chuyên khoa</a>
+                                <!-- <ul>
+                                    <li><a>Dụng Cụ Thí Nghiệm</a></li>
+                                    <li><a>Dụng Cụ Y Khoa Khác</a></li>
+                                </ul> -->
+                            </li>
+                            <li>
+                                <a asp-controller="Home" asp-action="TapDi">Dụng cụ tập đi</a>
+                                <!-- <ul>
+                                    <li><a>Khung Tập Đi</a></li>
+                                    <li><a>Gậy Chống - Nạng </a></li>
+                                </ul> -->
+                            </li>
+
+                            <li><a asp-controller="Home" asp-action="ThamMy">Dụng cụ thẩm mỹ</a></li>
+                            <li>
+                                <a asp-controller="Home" asp-action="TriLieu">Dụng cụ vật lý trị liệu</a>
+                                <!-- <ul>
+                                    <li><a>Dụng Cụ Diện Chẩn</a></li>
+                                    <li><a>Massage Gỗ</a></li>
+                                </ul> -->
+                            </li>
+
+                            <li>
+                                <a asp-controller="Home" asp-action="Inox" >Dụng cụ y tế Inox</a>
+                                <!-- <ul>
+                                    <li><a>Khay Chén Inox Y Tế</a></li>
+                                    <li><a>Nhíp Y Tế</a></li>
+                                </ul> -->
+                            </li>
+                            <li>
+                                <a asp-controller="Home" asp-action="DaiNep">Đai nẹp y tế</a>
+                                <!-- <ul>
+                                    <li><a>Đai Nẹp Đầu - Ngực - Cổ</a></li>
+                                    <li><a>Đai Nẹp Khớp Gối</a></li>
+                                </ul> -->
+                            </li>
+                            <li>
+                                <a asp-controller="Home" asp-action="Den">Đèn y khoa</a>
+                                <!-- <ul>
+                                    <li><a>Đèn Hồng Ngoại</a></li>
+                                    <li><a>Đèn Khám Bệnh</a></li>
+                                </ul> -->
+                            </li>
+                            <li>
+                                <a asp-controller="Home" asp-action="MayMoc">Máy móc y khoa</a>
+                                <!-- <ul>
+                                    <li><a>Máy Đo Đường Huyết</a></li>
+                                    <li><a>Máy Đo Huyết Áp</a></li>
+                                </ul> -->
+                            </li>
+                            <li>
+                                <a asp-controller="Home" asp-action="MeBe">Mẹ và bé</a>
+                                <!-- <ul>
+                                    <li><a>Máy Hút Mũi Cho Bé</a></li>
+                                    <li><a>Nhiệt Kế - Ẩm Kế</a></li>
+                                </ul> -->
+                            </li>
+                            <li>
+                                <a asp-controller="Home" asp-action="TTBYK">Trang thiết bị y khoa</a>
+                                <!-- <ul>
+                                    <li><a>Bàn Ăn Bệnh Nhân</a></li>
+                                    <li><a>Xe Lăn Điện</a></li>
+                                </ul> -->
+                            </li>
+                            <li>
+                                <a asp-controller="Home" asp-action="TieuHao">Vật tư y tế tiêu hao</a>
+                                <!-- <ul>
+                                    <li><a>Bông Băng Gạt</a></li>
+                                    <li><a>Dụng Cụ Phân Chia Thuốc</a></li>
+                                </ul> -->
+                            </li>
+                            <li>
+                                <a asp-controller="Home" asp-action="VoYK" >Vớ y khoa - Vớ giãn tĩnh mạch</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="medical_knowledge.html">Kiến thức y khoa</a></li>
+                    <li><a href="new_event.html">Tin tức - sự kiện</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <slide>
+        <div id="Container" class="w-clear">
+            <div class="w-clear wikis">
+                <div class="w-clear">
+                    <div class="left">
+                        <div class="box-left w-clear">
+                            <div class="left-tit">
+                                <div class="name flex">
+                                    <span>Danh mục sản phẩm</span>
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                            <div class="w-clear left-box">
+                                <ul class="menu-left">
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="ChuyenKhoa">Dụng cụ chuyên khoa</a>
+                                        <!-- <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="chevron-right"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"
+                                            class="svg-inline--fa fa-chevron-right dot"><path fill="currentColor"
+                                            d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10
+                                            .454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4
+                                            .686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4
+                                            .686-4.687-12.284-4.687-16.97 0z" class=""></path>
+                                        </svg> -->
+                                        <ul>
+                                            <li class="menu-level2">
+                                                <a asp-controller="Home" asp-action="ChuyenKhoa">Dụng Cụ Thí Nghiệm</a>
+                                            </li>
+                                            <li class="menu-level2">
+                                                <a>Dụng Cụ Y Khoa Khác</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="TapDi">Dụng cụ tập đi</a>
+
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="ThamMy">Dụng cụ thẩm mỹ</a>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="TriLieu">Dụng cụ vật lý trị liệu</a>
+                                        <ul>
+                                            <li class="menu-level2">
+                                                <a>Dụng Cụ Diện Chuẩn</a>
+                                            </li>
+                                            <li class="menu-level2">
+                                                <a>Massage Gỗ</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="Inox">Dụng cụ y tế inox</a>
+                                        <ul>
+                                            <li class="menu-level2">
+                                                <a>Khay - Chén Inox Y Tế</a>
+                                            </li>
+                                            <li class="menu-level2">
+                                                <a>Nhíp Y Tế</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="DaiNep">Đai nẹp y tế</a>
+                                        <ul>
+                                            <li class="menu-level2">
+                                                <a>Đai Nẹp Đầu - Ngực - Cổ</a>
+                                            </li>
+                                            <li class="menu-level2">
+                                                <a>Đai Nẹp Khớp Gối</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="Den">Đèn y khoa</a>
+                                        <ul>
+                                            <li class="menu-level2">
+                                                <a>Đèn Hồng Ngoại</a>
+                                            </li>
+                                            <li class="menu-level2">
+                                                <a>Đèn Khám Bệnh</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="MayMoc">Máy móc y khoa</a>
+                                        <ul>
+                                            <li class="menu-level2">
+                                                <a>Máy Đo Đường Huyết</a>
+                                            </li>
+                                            <li class="menu-level2">
+                                                <a>Máy Đo Huyết Áp</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="MeBe">Mẹ và bé</a>
+                                        <ul>
+                                            <li class="menu-level2">
+                                                <a>Máy Hút Mũi Cho Bé</a>
+                                            </li>
+                                            <li class="menu-level2">
+                                                <a>Nhiệt Kế - Ẩm kế</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="TTBYK">Trang thiết bị y khoa</a>
+                                        <ul>
+                                            <li class="menu-level2">
+                                                <a>Bàn Ăn Bệnh Nhân</a>
+                                            </li>
+                                            <li class="menu-level2">
+                                                <a>Xe Lăn Điện</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="TieuHao">Vật tư y tế tiêu hao</a>
+                                        <ul>
+                                            <li class="menu-level2">
+                                                <a>Bông Băng Gạt</a>
+                                            </li>
+                                            <li class="menu-level2">
+                                                <a>Dụng Cụ Phân Chia Thuốc</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="VoYK">Vớ y khoa - Vớ giãn tĩnh mạch</a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mid">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </slide>
+    <contents>
+        <banner_bottom>
+            <div id="bottom" style="background-image: url(../img/1560133446_bg.png)">
+                <div class="w-clear wikis">
+                    <div class="flex col_3">
+                        <div class="w-clear"></div>
+                        <div class="w-clear text-center">
+                            <p style="text-align:center"><img alt="" height="148" src="http://dungcuykhoasaigon.com/upload/images/148-148.png" width="148" /></p>
+
+                            <p style="text-align: center;"><span style="line-height:2.0;"><span style="font-size:18px;">Liên hệ với chúng tôi qua hotline</span></span></p>
+
+                            <p style="text-align: center;"><strong><span style="font-family:utma;"><span style="line-height:1.0;"><span style="font-size:26px;"><span style="color:#FF0000;">091 528 2266</span></span></span></span></strong></p>
+
+                            <p style="text-align: center;"><strong style="text-align: center;"><span style="font-family: utma;"><span style="line-height: 1;"><span style="font-size: 26px;"><span style="color: rgb(255, 0, 0);">093 885 2120</span></span></span></span></strong></p>
+
+                            <p style="text-align: center;"> </p>
+                        </div>
+                        <div class="w-clear">
+                            <div class="khung_lh">
+                                <div class="name">Liên hệ </div>
+                                <p>Điền đầy đủ thông tin bên dưới để đặt hàng hoặc liên hệ với chúng tôi</p>
+                                <script>
+                                    grecaptcha.ready(function () {
+                                        grecaptcha.execute('6LeRUaoUAAAAALRw3V51be-ptixaAld5nqvXEwq9', { action: 'contact' }).then(function (token) {
+                                            var recaptchaResponse = document.getElementById('recaptchaResponse');
+                                            recaptchaResponse.value = token;
+                                        });
+                                    });
+                                </script>
+                                <script src="~/lib/jquery/dist/jquery.min.js"></script>
+                                <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                                <script src="~/js/site.js" asp-append-version="true"></script>
+                                @RenderSection("Scripts", required: false)
+                                <script language="javascript" src="admin/media/scripts/my_script.js"></script>
+                                <script language="javascript">
+                                    function js_submit() {
+
+                                        if (isEmpty(document.getElementById('ten'), "Vui lòng nhập họ tên!")) {
+                                            document.getElementById('ten').focus();
+                                            return false;
+                                        }
+                                        if (isEmpty(document.getElementById('dienthoai'), "Vui lòng nhập điện thoại!")) {
+                                            document.getElementById('dienthoai').focus();
+                                            return false;
+                                        }
+
+                                        if (!isNumber(document.getElementById('dienthoai'), "Số điện thoại không hợp lệ!")) {
+                                            document.getElementById('dienthoai').focus();
+                                            return false;
+                                        }
+
+                                        if (!check_email(document.frm.email.value)) {
+                                            alert("Email không hợp lệ!");
+                                            document.frm.email.focus();
+                                            return false;
+                                        }
+
+                                        if (isEmpty(document.getElementById('noidung'), "_xinnhapnoidung")) {
+                                            document.getElementById('noidung').focus();
+                                            return false;
+                                        }
+
+                                        document.frm.submit();
+                                    }
+                                </script>
+
+                                <form method="post" name="frm" action="" enctype="multipart/form-data">
+                                    <div class="w-clear">
+
+
+                                        <div class="box-lh">
+                                            <div class="w-clear">
+                                                <input name="ten" type="text" id="ten" class="ipct input" placeholder="Họ và tên (*)" />
+                                            </div>
+
+                                            <div class="w-clear">
+                                                <input name="dienthoai" type="text" id="dienthoai" class="ipct input" placeholder="Điện thoại (*)" />
+                                            </div>
+
+
+                                            <div class="w-clear">
+                                                <input name="email" type="email" class="ipct input" placeholder="Email (*)" />
+                                            </div>
+
+
+                                            <div class="w-clear" style="margin: 0px 0 0 0">
+                                                <textarea name="noidung" cols="52" rows="3" id="noidung" class="tact input" placeholder="Nội dung"></textarea>
+                                            </div>
+                                            <div class="w-clear text-center">
+                                                <input type="hidden" value="lien-he" name="cm" />
+                                                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                                <input type="button" value="Gửi" onclick="js_submit();" class="btnct button" />
+                                                <input type="hidden" value="Nhập lại" onclick="document.frm.reset();" class="btnct button" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </banner_bottom>
+    </contents>
+    <footer>
+        <div id="footer">
+            <div class="wikis w-clear  ">
+                <div class="flex ft-content">
+                    <div class="ft-1 flex">
+                        <div class="logo_ft">
+                            <img src="~/img/82256_logo_vi.png" alt="DỤNG CỤ Y TẾ SÀI GÒN " />
+                        </div>
+                        <div class="w-clear">
+                            <div class="ft-name">
+                                DỤNG CỤ Y TẾ SÀI GÒN
+                            </div>
+                            <div class="w-clear">
+                                <p><span style="font-size:18px;"><strong>CTY TNHH SX & TM DỤNG CỤ Y TẾ SÀI GÒN </strong></span></p>
+
+                                <p><span style="font-size:14px;"><strong>Địa chỉ:</strong> </span>849 Nguyễn Kiệm - P.3 -<span style="font-size:14px;"> Q.Gò Vấp - TP.HCM</span></p>
+
+                                <p><span style="font-size:14px;"><strong>Hotline:</strong> 091 528 2266 - </span>093 885 2120 </p>
+
+                                <p><strong style="font-size: 14px;">Email:</strong><span style="font-size: 14px;"> </span>dungcuytesaigon2402@gmail.com</p>
+
+                                <p><span style="font-size:14px;"><strong>Website:</strong> www.dungcuytesaigon.com</span></p>
+
+                                <p><span style="font-size:14px;"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: 14px;">www.dungcuykhoasaigon.com</span></p>
+
+                                <p><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.dungcuthammysaigon.com</span></p>
+
+                                <p><span style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.thietbiykhoasaigon.com</span></p>
+
+                                <p><span style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.thietbiytesaigon.com.vn</span></p>
+                            </div>
+                            <div class="w-clear">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ft-2 w-clear">
+                        <div class="ft-tit">
+                            Hỗ trợ khách hàng
+                        </div>
+                        <div class="w-clear">
+                            <p>
+                                <a href="ho-tro/chuong-trinh-khuyen-mai.html">
+                                    <i class="fas fa-caret-right"></i> Chương trình khuyến mãi
+                                </a>
+                            </p>
+                            <p>
+                                <a href="ho-tro/chinh-sach-mua-hang.html">
+                                    <i class="fas fa-caret-right"></i> Chính sách mua hàng
+                                </a>
+                            </p>
+                            <p>
+                                <a href="ho-tro/thoi-gian-giao-hang.html">
+                                    <i class="fas fa-caret-right"></i> Thời gian giao hàng
+                                </a>
+                            </p>
+                        </div>
+                        <div class="w-clear ">
+
+                        </div>
+                    </div>
+
+                    <div class="ft-3 w-clear">
+                        <div class="ft-tit">
+                            Fanpage facebook
+                        </div>
+                        <div class="fb-page" data-width="500" data-height="250" data-tabs="" data-href="https://www.facebook.com/C%C3%B4ng-ty-D%E1%BB%A5ng-C%E1%BB%A5-Y-T%E1%BA%BF-S%C3%A0i-G%C3%B2n-111311423809153" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <div class="fb-xfbml-parse-ignore">
+                                <blockquote cite="https://www.facebook.com/C%C3%B4ng-ty-D%E1%BB%A5ng-C%E1%BB%A5-Y-T%E1%BA%BF-S%C3%A0i-G%C3%B2n-111311423809153">
+                                    <a href="https://www.facebook.com/C%C3%B4ng-ty-D%E1%BB%A5ng-C%E1%BB%A5-Y-T%E1%BA%BF-S%C3%A0i-G%C3%B2n-111311423809153">Facebook</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="w-clear reserved">
+            <div class="w-clear">
+                <div class="wikis flex">
+                    <div class="w-clear fl">
+                        Coppyright &copy 2019 <span>Dụng Cụ Y Tế Sài Gòn </span>. All right reserved. Design by <span>Nina</span>
+                    </div>
+                    <div class="w-clear fr">
+                        Đang online:     12 |
+                        Tổng truy cập:     193855
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show combo" id="coccoc-alo-phoneIcon">
+            <div class="coccoc-alo-ph-circle-fill"></div>
+                <div class="box_hide opening" style="display: block;">
+                    <div class="w-clear">
+                        <a href="tel:091 528 2266" class="br_50 bt goidien" >
+                            <i class="fas fa-phone-volume coccoc-alo-ph-img-circle br_50"></i>
+                            <div class="info">Hotline: 091 528 2266</div>
+                        </a>
+                    </div>
+                    <div class="w-clear">
+                        <a href="sms:091 528 2266" class="br_50 bt nhantin" >
+                            <i class="fas fa-comments br_50"></i>
+                            <div class="info">SMS: 091 528 2266</div>
+                        </a>
+                    </div>
+                    <div class="w-clear">
+                        <a href="" target="_blank" class="br_50 bt chiduong" >
+                            <i class="fas fa-map-marker-alt br_50"></i>
+                            <div class="info">Chỉ đường</div>
+                        </a>
+                    </div>
+                    <div class="w-clear">
+                        <a href="viber://chat?number=093 885 2120" target="_blank" class="br_50 bt viber" >
+                            <i class="fab fa-whatsapp br_50"></i>
+                            <div class="info">Viber: 093 885 2120</div>
+                        </a>
+                    </div>
+                    <div class="w-clear">
+                        <a href="https://www.facebook.com/C%C3%B4ng-ty-D%E1%BB%A5ng-C%E1%BB%A5-Y-T%E1%BA%BF-S%C3%A0i-G%C3%B2n-111311423809153" target="_blank" class="br_50 bt fb" >
+                            <i class="fab fa-facebook-f br_50"></i>
+                            <div class="info">Facebook</div>
+                        </a>
+                    </div>
+                    <div class="w-clear">
+                        <a href="https://zalo.me/0938852120" target="_blank" class="br_50 bt zalo" >
+                            <img src="./img/zalo-50.png" alt="Zalo">
+                            <div class="info">Zalo: 0938852120</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="br_50 bt_combo bt_open bt_open">
+                    <i class="fas fa-user-circle" style=" vertical-align: top;"></i>
+                </div>
+            </div>
+            <div id="back-top" style="cursor:pointer;" title="Lên Đầu Trang."><a class="border_radius"><img src="img/top.png" alt="backtop" /></a> </div>
+        </div> -->
+    </footer>
+    <div class="on-top"> <a class="btn-top" href="javascript:void(0);" title="Top" style="display: inline;"></a> </div>
+</body>
+</html>
