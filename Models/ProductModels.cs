@@ -11,8 +11,7 @@ namespace Webtt.Models
     {
         public int ProductId { get; set; }
         [DisplayName("ProductName")]
-        [Required(ErrorMessage = "Not null")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
+        [Required(ErrorMessage = "Not null")]       
         public string ProductName { get; set; }
         [DisplayName("Image")]
         public string ProductImage { get; set; } 
@@ -20,7 +19,6 @@ namespace Webtt.Models
         public string Description { get; set; }
         [DisplayName("Price")]
         [Required]
-        [Range(0,999999.99999)]
         public double ProductPrice { get; set; }
         [DisplayName("Category")]
         public int CategoryId { get; set; }

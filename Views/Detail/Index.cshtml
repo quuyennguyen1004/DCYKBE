@@ -1,0 +1,29 @@
+﻿@model Webtt.Models.Product
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img src="~/img/@Model.ProductImage" alt="img"/></div>
+                    </div>
+
+                </div>
+                <div class="details col-md-6">
+                    <h2 class="product-title">@Html.DisplayFor(model => model.ProductName)</h2>
+                    <h3>Mô tả:</h3>
+                    <p class="product-description" style="font-size: 16px;">
+                        @Html.DisplayFor(model => model.Description)
+                    </p>
+                    <h3 class="price">Giá: <span>@Html.DisplayFor(model => model.ProductPrice)</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

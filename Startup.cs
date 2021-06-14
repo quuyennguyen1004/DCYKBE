@@ -62,6 +62,7 @@ options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
