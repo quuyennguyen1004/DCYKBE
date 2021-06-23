@@ -48,15 +48,15 @@ namespace Webtt.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7f02b0aa-a8e6-4b92-8901-e45c3f2b6fb1",
-                            ConcurrencyStamp = "f21a14b4-9a20-4e7a-a8a4-b3294f906a8b",
+                            Id = "4c7e2543-2874-419a-97a3-f35b4c69225f",
+                            ConcurrencyStamp = "8d4319bf-0cb4-4c4e-b4e7-aaf02d6177b6",
                             Name = "Visitor",
                             NormalizedName = "VISITOR"
                         },
                         new
                         {
-                            Id = "b2b9d401-1b92-43ac-8b5e-abe8fe2dee2d",
-                            ConcurrencyStamp = "3d108e73-5a61-4782-9c0f-c2669a130230",
+                            Id = "8fa6a031-ebad-4f12-845e-09004282e4be",
+                            ConcurrencyStamp = "823b9686-c9fc-4ee6-af76-eb62a1529af9",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -245,6 +245,40 @@ namespace Webtt.Migrations
                         {
                             CategoryId = 13,
                             CategoryName = "Sản Phẩm Mới"
+                        });
+                });
+
+            modelBuilder.Entity("Webtt.Models.News", b =>
+                {
+                    b.Property<int>("NewsId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("NewsContent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NewsImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NewsTitle")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("NewsId");
+
+                    b.ToTable("Newss");
+
+                    b.HasData(
+                        new
+                        {
+                            NewsId = 1,
+                            NewsContent = " Test title 1",
+                            NewsImage = "chuyenkhoa.jpg",
+                            NewsTitle = "Title test"
                         });
                 });
 

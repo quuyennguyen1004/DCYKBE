@@ -1,0 +1,272 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detail</h1>
+@model Webtt.Models.Product
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img src="~/img/@Html.DisplayFor(model => model.ProductImage)" /></div>
+                    </div>
+                </div>
+                <div class="details col-md-6">
+                    <h2 class="product-title"> @Html.DisplayFor(model => model.ProductName)</h2>
+                    <h3>Mô tả:</h3>
+                    <p class="product-description" style="font-size: 16px;">
+                        @Html.DisplayFor(model => model.Description)
+                    </p>
+                    <h3 class="price">Giá: <span> @Html.DisplayFor(model => model.ProductPrice)</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-clear sanpham">
+        <div class="w-clear wikis">
+            <div class="main-tit w-clear">
+                <div class="name">
+                    Sản phẩm liên quan
+                </div>
+                <a class="more" href="">
+                    Xem tất cả
+                </a>
+            </div>
+            <div class="w-clear">
+                <div class="slick_5 slick-initialized slick-slider">
+                    <img src="../assets/css/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                    <div aria-live="polite" class="slick-list draggable">
+
+                        <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                            @if (@Html.DisplayFor(model => model.ProductName) == @Html.DisplayFor(model => model.CategoryId))
+                            {
+                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+                                    <div class="box-sp w-clear">
+                                        <a href="detail-product.html" tabindex="-1">
+                                            <div class="images">
+                                                <img src="../assets/css/img/xe-tiem-thuoc-30x40-2-tang1561266976.jpg" alt="xe tiem 30*40 2 tang 2 vong thau">
+                                            </div>
+                                            <div class="new">
+                                            </div>
+                                        </a>
+                                        <div class="info w-clear">
+                                            <div class="w-clear">
+                                                <a href="" tabindex="-1">
+                                                    <h3>
+                                                        @Html.DisplayFor(model => model.ProductName)
+                                                    </h3>
+                                                </a>
+                                                <div class="info-gia flex">
+                                                    <div class="gia">
+                                                        Giá:
+                                                        <span>@Html.DisplayFor(model => model.ProductPrice)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                 style="width: 202px;" data-slick-index="-4" aria-hidden="true">
+                                <div class="box-sp w-clear">
+                                    <a href="" tabindex="-1">
+                                        <div class="images">
+                                            <img src="../assets/css/img/xe-tiem-thuoc-30x40-2-tang1561266976.jpg" alt="xe tiem 30*40 2 tang 2 vong thau">
+                                        </div>
+                                        <div class="new">
+                                        </div>
+                                    </a>
+                                    <div class="info w-clear">
+                                        <div class="w-clear">
+                                            <a href="" tabindex="-1">
+                                                <h3>
+                                                    Xe tiem 30*40 2 tang 2 vong thau
+                                                </h3>
+                                            </a>
+                                            <div class="info-gia flex">
+                                                <div class="gia">
+                                                    Giá:
+                                                    <span>Liên hệ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                 style="width: 202px;" data-slick-index="-3" aria-hidden="true">
+                                <div class="box-sp w-clear">
+                                    <a href="" tabindex="-1">
+                                        <div class="images">
+                                            <img src="../assets/css/img/xe-tiem-thuoc-30x40-2-tang1561266976.jpg" alt="xe tiem 30*40 2 tang 2 vong thau">
+                                        </div>
+                                        <div class="new">
+                                        </div>
+                                    </a>
+                                    <div class="info w-clear">
+                                        <div class="w-clear">
+                                            <a href="" tabindex="-1">
+                                                <h3>
+                                                    Xe tiem 30*40 2 tang 2 vong thau
+                                                </h3>
+                                            </a>
+                                            <div class="info-gia flex">
+                                                <div class="gia">
+                                                    Giá:
+                                                    <span>Liên hệ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                 style="width: 202px;" data-slick-index="-2" aria-hidden="true">
+                                <div class="box-sp w-clear">
+                                    <a href="" tabindex="-1">
+                                        <div class="images">
+                                            <img src="../assets/css/img/xe-tiem-thuoc-30x40-2-tang1561266976.jpg" alt="xe tiem 30*40 2 tang 2 vong thau">
+                                        </div>
+                                        <div class="new">
+                                        </div>
+                                    </a>
+                                    <div class="info w-clear">
+                                        <div class="w-clear">
+                                            <a href="" tabindex="-1">
+                                                <h3>
+                                                    Xe tiem 30*40 2 tang 2 vong thau
+                                                </h3>
+                                            </a>
+                                            <div class="info-gia flex">
+                                                <div class="gia">
+                                                    Giá:
+                                                    <span>Liên hệ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                 style="width: 202px;" data-slick-index="-1" aria-hidden="true">
+                                <div class="box-sp w-clear">
+                                    <a href="" tabindex="-1">
+                                        <div class="images">
+                                            <img src="../assets/css/img/xe-tiem-thuoc-30x40-2-tang1561266976.jpg" alt="xe tiem 30*40 2 tang 2 vong thau">
+                                        </div>
+                                        <div class="new">
+                                        </div>
+                                    </a>
+                                    <div class="info w-clear">
+                                        <div class="w-clear">
+                                            <a href="" tabindex="-1">
+                                                <h3>
+                                                    Xe tiem 30*40 2 tang 2 vong thau
+                                                </h3>
+                                            </a>
+                                            <div class="info-gia flex">
+                                                <div class="gia">
+                                                    Giá:
+                                                    <span>Liên hệ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                 style="width: 202px;" data-slick-index="0" aria-hidden="true">
+                                <div class="box-sp w-clear">
+                                    <a href="" tabindex="-1">
+                                        <div class="images">
+                                            <img src="../assets/css/img/xe-tiem-thuoc-30x40-2-tang1561266976.jpg" alt="xe tiem 30*40 2 tang 2 vong thau">
+                                        </div>
+                                        <div class="new">
+                                        </div>
+                                    </a>
+                                    <div class="info w-clear">
+                                        <div class="w-clear">
+                                            <a href="" tabindex="-1">
+                                                <h3>
+                                                    Xe tiem 30*40 2 tang 2 vong thau
+                                                </h3>
+                                            </a>
+                                            <div class="info-gia flex">
+                                                <div class="gia">
+                                                    Giá:
+                                                    <span>Liên hệ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                 style="width: 202px;" data-slick-index="1" aria-hidden="true">
+                                <div class="box-sp w-clear">
+                                    <a href="" tabindex="-1">
+                                        <div class="images">
+                                            <img src="../assets/css/img/xe-tiem-thuoc-30x40-2-tang1561266976.jpg" alt="xe tiem 30*40 2 tang 2 vong thau">
+                                        </div>
+                                        <div class="new">
+                                        </div>
+                                    </a>
+                                    <div class="info w-clear">
+                                        <div class="w-clear">
+                                            <a href="" tabindex="-1">
+                                                <h3>
+                                                    Xe tiem 30*40 2 tang 2 vong thau
+                                                </h3>
+                                            </a>
+                                            <div class="info-gia flex">
+                                                <div class="gia">
+                                                    Giá:
+                                                    <span>Liên hệ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                 style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+                                <div class="box-sp w-clear">
+                                    <a href="" tabindex="-1">
+                                        <div class="images">
+                                            <img src="../assets/css/img/xe-tiem-thuoc-30x40-2-tang1561266976.jpg" alt="xe tiem 30*40 2 tang 2 vong thau">
+                                        </div>
+                                        <div class="new">
+                                        </div>
+                                    </a>
+                                    <div class="info w-clear">
+                                        <div class="w-clear">
+                                            <a href="" tabindex="-1">
+                                                <h3>
+                                                    Xe tiem 30*40 2 tang 2 vong thau
+                                                </h3>
+                                            </a>
+                                            <div class="info-gia flex">
+                                                <div class="gia">
+                                                    Giá:
+                                                    <span>Liên hệ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="../assets/css/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

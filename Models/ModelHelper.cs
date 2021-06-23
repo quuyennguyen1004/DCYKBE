@@ -12,6 +12,7 @@ namespace Webtt.Models
         {
             CreateMap<Product, ProductModels>();
             CreateMap<UserRegistrationModel, User>();
+            CreateMap<News, NewsModels>();
         }
 
     }

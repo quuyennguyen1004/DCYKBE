@@ -168,7 +168,6 @@ D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_Lay
 D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_LoginPartial.cshtml.g.cs
 D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
-D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Views\Detail\Index.cshtml.g.cs
 D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Views\Home\ChuyenKhoa.cshtml.g.cs
 D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Views\Home\DaiNep.cshtml.g.cs
 D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Views\Home\Den.cshtml.g.cs
@@ -198,3 +197,14 @@ D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Webtt.dll
 D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Webtt.pdb
 D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Webtt.genruntimeconfig.cache
 D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Webtt.csproj.AssemblyReference.cache
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Views\Detail\Detail.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Views\Detail\Index.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\AccountManage\Delete.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\AccountManage\Edit.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\AccountManage\Index.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Newss\Add.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Newss\Delete.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Newss\Edit.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Newss\Index.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Views\Home\News.cshtml.g.cs
+D:\Webtt\Webtt\Webtt\obj\Debug\netcoreapp3.1\Razor\Views\NewsDetail\Index.cshtml.g.cs

@@ -11,7 +11,7 @@ namespace Webtt.Controllers
 {
     public class DetailController : Controller
     {
-         DataContext dataContext;
+         private DataContext dataContext;
         IMapper mapper;
         public DetailController(DataContext dataContext,IMapper mapper)
         {
@@ -27,12 +27,18 @@ namespace Webtt.Controllers
             //{
             //    ProductId = products.ProductId,
             //    ProductName = products.ProductName,
-            //    ProductImage = products.ProductImage,               
+            //    ProductImage = products.ProductImage,
             //    Description = products.Description,
-            //    ProductPrice=products.ProductPrice                
+            //    ProductPrice = products.ProductPrice
             //};
             //Console.WriteLine(currentProduct);
             return View(products);
         }
+        //[HttpGet("Detail/{id}/{name}")]
+        //public IActionResult Detail(int id)
+        //{
+        //    Product products = dataContext.Products.FirstOrDefault(p => p.ProductId == id);
+        //    return View(products);
+        //}
     }
 }

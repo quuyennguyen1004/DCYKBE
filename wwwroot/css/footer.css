@@ -1,4 +1,4 @@
-#footer{
+#footer {
     max-width: 1363px;
     width: 100%;
     margin: 0 auto;
@@ -6,17 +6,20 @@
     background-color: rgb(32, 172, 226);
     padding: 15px 0;
 }
- #footer a{
-    color: #fff;
-}
-.wikis{
+
+    #footer a {
+        color: #fff;
+    }
+
+.wikis {
     max-width: 1230px;
     width: 100%;
     margin: 0 auto;
     position: relative;
     padding: 0 15px;
 }
-.reserved{
+
+.reserved {
     margin: 0 auto;
     max-width: 1363px;
     width: 100%;
@@ -24,18 +27,21 @@
     height: 37px;
     color: #fff;
 }
-.fl{
+
+.fl {
     display: inline-block;
     vertical-align: top;
     text-align: center;
     margin: 10px 0 0 0;
 }
-.fr{
+
+.fr {
     display: inline-block;
     vertical-align: top;
     margin: -18px 0 0 850px;
 }
-.logo_ft{
+
+.logo_ft {
     border: none;
     max-width: 100%;
     vertical-align: middle;
@@ -44,7 +50,8 @@
     border-radius: 5px;
     margin: 10px 15px 10px 0;
 }
-.ft-name{
+
+.ft-name {
     font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
@@ -53,12 +60,15 @@
     border: none;
     color: #fff;
 }
-.w-clear{
+
+.w-clear {
     position: relative;
 }
-b,strong{
+
+b, strong {
     font-weight: bold;
 }
+
 .ft-tit {
     margin: 0 0 15px 0;
     padding: 0 0 10px 0px;
@@ -68,33 +78,37 @@ b,strong{
     text-transform: uppercase;
     background-size: 50px 2px;
 }
+
 .ft-1 {
     width: 50%;
     box-sizing: border-box;
     padding: 15px 0;
     -webkit-flex-flow: row wrap;
 }
+
 .ft-2 {
     width: 19%;
     box-sizing: border-box;
     float: left;
     padding: 15px 0;
 }
-.ft-2 a {
-    text-decoration: none;
-    color: #000;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    outline: none;
-}
+
+    .ft-2 a {
+        text-decoration: none;
+        color: #000;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        outline: none;
+    }
+
 .ft-3 {
     margin: 0px 0;
     width: 23%;
     box-sizing: border-box;
     padding: 15px 0px;
-    
 }
+
 .flex {
     display: -webkit-box;
     display: -moz-box;
@@ -105,10 +119,12 @@ b,strong{
     align-items: flex-start;
     -webkit-flex-flow: row wrap;
 }
-p{
+
+p {
     margin: 0 0 15px 0;
     margin-bottom: 7px;
 }
+
 ._2zfs {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0) 100%);
     height: 100%;
@@ -118,9 +134,11 @@ p{
     width: 100%;
     z-index: -1;
 }
+
 #footer, #footer a {
     color: #fff;
 }
+
 .fa-caret-right:before {
     content: "\f0da";
 }
@@ -143,6 +161,3 @@ p{
     border-radius: 10px;
     z-index: 99999;
 }
-
-
-

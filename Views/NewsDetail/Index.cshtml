@@ -1,0 +1,12 @@
+﻿@model Webtt.Models.News
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+
+<h3>@Html.DisplayFor(model => model.NewsTitle)</h3>
+<p>@Html.DisplayFor(model => model.NewsContent)</p>
+<img src="~/img/@Html.DisplayFor(model => model.NewsImage)" alt="">

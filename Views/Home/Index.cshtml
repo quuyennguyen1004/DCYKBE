@@ -2,764 +2,898 @@
     ViewData["Title"] = "Home Page";
 }
 @model List<ProductModels>
-<div class="pad_10 w-clear">
-    <a href="san-pham-khuyen-mai.html" class="bt_menu">
-        <img src="../img/km-25.png" alt="Khuyến mãi"> Khuyến mãi
-    </a>
-    <a href="san-pham-gia-tot.html" class="bt_menu">
-        <img src="../img/hot-25.png" alt="Khuyến mãi"> Sản phẩm giá tốt
-    </a>
-</div>
-<div class=" slider ">
-    <div class="w-clear">
-        <div id="slider1_container" style="position: relative;width: 930px; height: 360px;">
-            <div u="slides" style="cursor: move;width: 930px; height: 360px;overflow: hidden;">
-                <div>
-                    <img u="image" src="../img/15612815300.jpg" alt="" />
+    <div class="left">
+        <div class="box-left w-clear">
+            <div class="left-tit">
+                <div class="name flex">
+                    <span>Danh mục sản phẩm</span>
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="w-clear left-box">
+                <ul class="menu-left">
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="ChuyenKhoa">Dụng cụ chuyên khoa</a>
+                        <!-- <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="chevron-right"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"
+                            class="svg-inline--fa fa-chevron-right dot"><path fill="currentColor"
+                            d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10
+                            .454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4
+                            .686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4
+                            .686-4.687-12.284-4.687-16.97 0z" class=""></path>
+                        </svg> -->
+                        <ul>
+                            <li class="menu-level2">
+                                <a asp-controller="Home" asp-action="ChuyenKhoa">Dụng Cụ Thí Nghiệm</a>
+                            </li>
+                            <li class="menu-level2">
+                                <a>Dụng Cụ Y Khoa Khác</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="TapDi">Dụng cụ tập đi</a>
+
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="ThamMy">Dụng cụ thẩm mỹ</a>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="TriLieu">Dụng cụ vật lý trị liệu</a>
+                        <ul>
+                            <li class="menu-level2">
+                                <a>Dụng Cụ Diện Chuẩn</a>
+                            </li>
+                            <li class="menu-level2">
+                                <a>Massage Gỗ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="Inox">Dụng cụ y tế inox</a>
+                        <ul>
+                            <li class="menu-level2">
+                                <a>Khay - Chén Inox Y Tế</a>
+                            </li>
+                            <li class="menu-level2">
+                                <a>Nhíp Y Tế</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="DaiNep">Đai nẹp y tế</a>
+                        <ul>
+                            <li class="menu-level2">
+                                <a>Đai Nẹp Đầu - Ngực - Cổ</a>
+                            </li>
+                            <li class="menu-level2">
+                                <a>Đai Nẹp Khớp Gối</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="Den">Đèn y khoa</a>
+                        <ul>
+                            <li class="menu-level2">
+                                <a>Đèn Hồng Ngoại</a>
+                            </li>
+                            <li class="menu-level2">
+                                <a>Đèn Khám Bệnh</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="MayMoc">Máy móc y khoa</a>
+                        <ul>
+                            <li class="menu-level2">
+                                <a>Máy Đo Đường Huyết</a>
+                            </li>
+                            <li class="menu-level2">
+                                <a>Máy Đo Huyết Áp</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="MeBe">Mẹ và bé</a>
+                        <ul>
+                            <li class="menu-level2">
+                                <a>Máy Hút Mũi Cho Bé</a>
+                            </li>
+                            <li class="menu-level2">
+                                <a>Nhiệt Kế - Ẩm kế</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="TTBYK">Trang thiết bị y khoa</a>
+                        <ul>
+                            <li class="menu-level2">
+                                <a>Bàn Ăn Bệnh Nhân</a>
+                            </li>
+                            <li class="menu-level2">
+                                <a>Xe Lăn Điện</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="TieuHao">Vật tư y tế tiêu hao</a>
+                        <ul>
+                            <li class="menu-level2">
+                                <a>Bông Băng Gạt</a>
+                            </li>
+                            <li class="menu-level2">
+                                <a>Dụng Cụ Phân Chia Thuốc</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-level1">
+                        <a asp-controller="Home" asp-action="VoYK">Vớ y khoa - Vớ giãn tĩnh mạch</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="pad_10 w-clear">
+            <a href="san-pham-khuyen-mai.html" class="bt_menu">
+                <img src="../img/km-25.png" alt="Khuyến mãi"> Khuyến mãi
+            </a>
+            <a href="san-pham-gia-tot.html" class="bt_menu">
+                <img src="../img/hot-25.png" alt="Khuyến mãi"> Sản phẩm giá tốt
+            </a>
+        </div>
+        <div class=" slider ">
+            <div class="w-clear">
+                <div id="slider1_container" style="position: relative;width: 930px; height: 360px;">
+                    <div u="slides" style="cursor: move;width: 930px; height: 360px;overflow: hidden;">
+                        <div>
+                            <img u="image" src="~/img/15612815300.jpg" alt="" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-            
-<div class="slick_3 slick_pad_5 slick-initialized slick-slider">
-    <div class="slick-list draggable">
-        <div class="slick-track" role="listbox" style="/* opacity: 1; */width: 1220px;transform: translate3d(0px, 0px, 0px);">
-            <div class="item slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 400px;">
-                <a href="">
-                    <img src="../img/quang-cao-2-15601327472.png" alt="quang cao">
-                </a>
-            </div>
-            <div class="item slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 400px;">
-                <a href="">
-                    <img src="../img/qua-tang-15601327471.png" alt="qua tang">
-                </a>
-            </div>
-            <div class="item slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 400px;">
-                <a href="">
-                    <img src="../img/quang-cao-15601327470.png" alt="quang cao">
-                </a>
+
+        <div class="slick_3 slick_pad_5 slick-initialized slick-slider">
+            <div class="slick-list draggable">
+                <div class="slick-track" role="listbox" style="/* opacity: 1; */width: 1220px;transform: translate3d(0px, 0px, 0px);">
+                    <div class="item slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 400px;">
+                        <a href="">
+                            <img src="../img/quang-cao-2-15601327472.png" alt="quang cao">
+                        </a>
+                    </div>
+                    <div class="item slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 400px;">
+                        <a href="">
+                            <img src="../img/qua-tang-15601327471.png" alt="qua tang">
+                        </a>
+                    </div>
+                    <div class="item slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 400px;">
+                        <a href="">
+                            <img src="../img/quang-cao-15601327470.png" alt="quang cao">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-      
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                SẢN PHẨM MỚI 
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>   
+
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        SẢN PHẨM MỚI
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
                 <div class="w-clear">
                     <div class="slick_5 slick-initialized slick-slider">
-                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">                     
-                                <div aria-live="polite" class="slick-list draggable">
-                                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                                        @foreach (var item in Model)
-                                        {
-                                            @if (@item.CategoryId == 13)
-                                            {
-                                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 13)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
 
-                                                    <div class="box-sp w-clear">
-                                                        <a tabindex="-1" asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName">
-                                                            <div class="images">
-                                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                                            </div>
-                                                            <div class="new">
-                                                            </div>
+                                            <div class="box-sp w-clear">
+                                                <a tabindex="-1" asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+                                                    <div class="new">
+                                                    </div>
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
                                                         </a>
-                                                        <div class="info w-clear">
-                                                            <div class="w-clear">
-                                                                <a href="" tabindex="-1">
-                                                                    <h3>
-                                                                        @item.ProductName
-                                                                    </h3>
-                                                                </a>
-                                                                <div class="info-gia flex">
-                                                                    <div class="gia">
-                                                                        Giá:
-                                                                        <span>@item.ProductPrice</span>
-                                                                    </div>
-                                                                </div>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    }
                                 }
-                            }
-                                            </div>
-                                </div>
-                                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
                             </div>
-                </div>
-    </div>
-    </div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                DỤNG CỤ CHUYÊN KHOA
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 1)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
-
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
-                                                </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            }
-                        }
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
                     </div>
                 </div>
-                <img src="/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
             </div>
         </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-               DỤNG CỤ TẬP ĐI
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 2)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
-
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
-                                                </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            }
-                        }
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        DỤNG CỤ CHUYÊN KHOA
                     </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
                 </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                DỤNG CỤ THẨM MỸ
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 3)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
-
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
-                                                </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            }
-                        }
-                    </div>
-                </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                DỤNG CỤ TRỊ LIỆU
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 4)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
-
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
-                                                </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            }
-                        }
-                    </div>
-                </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                DỤNG CỤ Y TẾ INOX
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 5)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
-
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
-                                                </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            }
-                        }
-                    </div>
-                </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                ĐAI NẸP Y TẾ 
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 6)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
-
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
-                                                </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            }
-                        }
-                    </div>
-                </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                ĐÈN Y KHOA
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 7)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
-
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
-                                                </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            }
-                        }
-                    </div>
-                </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                MÁY MÓC Y KHOA
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 8)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
-
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
-                                                </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            }
-                        }
-                    </div>
-                </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                MẸ VÀ BÉ
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>   
                 <div class="w-clear">
                     <div class="slick_5 slick-initialized slick-slider">
-                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">                     
-                                <div aria-live="polite" class="slick-list draggable">
-                                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                                        @foreach (var item in Model)
-                                        {
-                                            @if (@item.CategoryId == 9)
-                                            {
-                                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 1)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
 
-                                                    <div class="box-sp w-clear">
-                                                        <a href="" tabindex="-1">
-                                                            <div class="images">
-                                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                                            </div>
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
                                                         </a>
-                                                        <div class="info w-clear">
-                                                            <div class="w-clear">
-                                                                <a href="" tabindex="-1">
-                                                                    <h3>
-                                                                        @item.ProductName
-                                                                    </h3>
-                                                                </a>
-                                                                <div class="info-gia flex">
-                                                                    <div class="gia">
-                                                                        Giá:
-                                                                        <span>@item.ProductPrice</span>
-                                                                    </div>
-                                                                </div>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
- 
+                                            </div>
+                                        </div>
+
+                                    }
                                 }
-                            }
-                                            </div>
-                                </div>
-                                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
                             </div>
+                        </div>
+                        <img src="/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+                    </div>
                 </div>
-    </div>
-    </div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                TRANG THIẾT BỊ Y KHOA
             </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
         </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 10)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        DỤNG CỤ TẬP ĐI
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 2)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
 
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
                                                 </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                            }
-                        }
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
                     </div>
                 </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
             </div>
         </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                VẬT TƯ Y TẾ TIÊU HAO
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 11)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        DỤNG CỤ THẨM MỸ
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 3)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
 
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
                                                 </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                            }
-                        }
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
                     </div>
                 </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
             </div>
         </div>
-    </div>
-</div>
-<div class="w-clear sanpham">
-    <div class="w-clear wikis">
-        <div class="main-tit w-clear">
-            <div class="name">
-                VỚ Y KHOA-VỚ GIÃN TĨNH MẠCH
-            </div>
-            <a class="more" href="">
-                Xem tất cả
-            </a>
-        </div>
-        <div class="w-clear">
-            <div class="slick_5 slick-initialized slick-slider">
-                <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
-                        @foreach (var item in Model)
-                        {
-                            @if (@item.CategoryId == 12)
-                            {
-                                <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
-                                     style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        DỤNG CỤ TRỊ LIỆU
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 4)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
 
-                                    <div class="box-sp w-clear">
-                                        <a href="" tabindex="-1">
-                                            <div class="images">
-                                                <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
-                                            </div>
-                                        </a>
-                                        <div class="info w-clear">
-                                            <div class="w-clear">
-                                                <a href="" tabindex="-1">
-                                                    <h3>
-                                                        @item.ProductName
-                                                    </h3>
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
                                                 </a>
-                                                <div class="info-gia flex">
-                                                    <div class="gia">
-                                                        Giá:
-                                                        <span>@item.ProductPrice</span>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                            }
-                        }
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
                     </div>
                 </div>
-                <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+            </div>
+        </div>
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        DỤNG CỤ Y TẾ INOX
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 5)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        ĐAI NẸP Y TẾ
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 6)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        ĐÈN Y KHOA
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 7)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        MÁY MÓC Y KHOA
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 8)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        MẸ VÀ BÉ
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 9)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        TRANG THIẾT BỊ Y KHOA
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 10)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        VẬT TƯ Y TẾ TIÊU HAO
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 11)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-clear sanpham">
+            <div class="w-clear wikis">
+                <div class="main-tit w-clear">
+                    <div class="name">
+                        VỚ Y KHOA-VỚ GIÃN TĨNH MẠCH
+                    </div>
+                    <a class="more" href="">
+                        Xem tất cả
+                    </a>
+                </div>
+                <div class="w-clear">
+                    <div class="slick_5 slick-initialized slick-slider">
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-prev slick-arrow" style="display: block;">
+                        <div aria-live="polite" class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                @foreach (var item in Model)
+                                {
+                                    @if (@item.CategoryId == 12)
+                                    {
+                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+
+                                            <div class="box-sp w-clear">
+                                                <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                    <div class="images">
+                                                        <img src="~/img/@item.ProductImage" alt="" width="250" height="220">
+                                                    </div>
+                                                </a>
+                                                <div class="info w-clear">
+                                                    <div class="w-clear">
+                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                            <h3>
+                                                                @item.ProductName
+                                                            </h3>
+                                                        </a>
+                                                        <div class="info-gia flex">
+                                                            <div class="gia">
+                                                                Giá:
+                                                                <span>@item.ProductPrice</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <img src="~/img/prev-20.png" alt="prev" class="slick-next slick-arrow" style="display: block;">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 

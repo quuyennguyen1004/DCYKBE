@@ -1,0 +1,48 @@
+﻿@model Webtt.Models.NewsModels
+
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Add</h1>
+
+<h4>News</h4>
+<hr />
+<div class="products">
+ 
+    <form asp-action="Add" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="NewsTitle" class="control-label"></label>
+            <input asp-for="NewsTitle" class="form-control" />
+            <span asp-validation-for="NewsTitle" class="text-danger"></span>
+        </div>
+        @*<div class="form-group">
+            <label asp-for="NewsImage" class="control-label"></label>
+            <input asp-for="NewsImage" type="file" name="photo" class="form-control" />
+            <span asp-validation-for="NewsImage" class="text-danger"></span>
+        </div>*@
+        <div class="form-group">
+            <label asp-for="NewsImage" class="control-label"></label>
+            <div class="custom-file">
+                <input asp-for="NewsImage" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="NewsImage">Choose file</label>
+            </div>
+            <span asp-validation-for="NewsImage" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NewsContent" class="control-label"></label>
+            <input asp-for="NewsContent" class="form-control" />
+            <span asp-validation-for="NewsContent" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add" class="btn btn-primary" />
+        </div>
+    </form>
+    </div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

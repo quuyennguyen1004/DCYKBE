@@ -27,7 +27,8 @@ namespace Webtt.Controllers
         public IActionResult Index()
         {
             List<ProductModels> products = new List<ProductModels>();
-            List<Product> productss = dataContext.Products.ToList();
+          
+                List<Product> productss = dataContext.Products.ToList();
             
             foreach(var item in productss)
             {
@@ -92,6 +93,10 @@ namespace Webtt.Controllers
         public IActionResult SPMoi()
         {
             return View(dataContext.Products.Where(p => p.CategoryId == 13).ToList());
+        }
+        public IActionResult News()
+        {
+            return View(dataContext.Newss.ToList());
         }
         public IActionResult Privacy()
         {
