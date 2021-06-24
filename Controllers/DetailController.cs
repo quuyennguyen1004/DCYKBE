@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,10 +19,11 @@ namespace Webtt.Controllers
             this.dataContext = dataContext;
             this.mapper = mapper;
         }
-        [HttpGet("Detail/{id}/{name}")]
+        [HttpGet("Detail/{name}")]
         public IActionResult Index(int id)
         {
-            Product products = dataContext.Products.FirstOrDefault(p => p.ProductId == id);
+            ViewBag.RelatedProduct = ListRelatedProduct(id);
+            var products = dataContext.Products.FirstOrDefault(p => p.ProductId == id);
 
             //ProductModels currentProduct = new ProductModels
             //{
@@ -34,11 +36,14 @@ namespace Webtt.Controllers
             //Console.WriteLine(currentProduct);
             return View(products);
         }
-        //[HttpGet("Detail/{id}/{name}")]
-        //public IActionResult Detail(int id)
-        //{
-        //    Product products = dataContext.Products.FirstOrDefault(p => p.ProductId == id);
-        //    return View(products);
-        //}
+        public List<Product> ListRelatedProduct(int productId)
+        {
+            var product = dataContext.Products.Find(productId);
+            if (product == null) 
+            {
+                return null;
+            }
+            return dataContext.Products.Where(x => x.ProductId != productId  && x.CategoryId == product.CategoryId).ToList();
+        }
     }
 }

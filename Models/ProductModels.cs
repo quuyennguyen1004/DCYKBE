@@ -31,6 +31,8 @@ namespace Webtt.Models
         public override int GetHashCode()
         {
             return ProductId;
-        }
+        }  
+        
     }
+
 }

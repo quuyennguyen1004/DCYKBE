@@ -59,10 +59,10 @@
                     <td><img src="~/img/@item.NewsImage" class="img-thumbnail" asp-append-version="true" style="width:150px;height:150px" /></td>
                     <td>@item.NewsTitle</td>
                     <td>
-                        <a asp-controller="Product" asp-action="Edit"  asp-route-id="@item.NewsId" >
+                        <a asp-controller="Newss" asp-action="Edit"  asp-route-id="@item.NewsId" >
                             <i class=" edit fa fa-pencil" aria-hidden="true"></i>
                         </a>
-                        <a asp-controller="Product" asp-action="Delete"  asp-route-id="@item.NewsId">
+                        <a asp-controller="Newss" asp-action="Delete"  asp-route-id="@item.NewsId">
                             <i class=" delete fa fa-trash" aria-hidden="true"></i>
                         </a>
                     </td>
