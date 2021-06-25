@@ -1,34 +1,32 @@
 ﻿@model Webtt.Models.User
-@{
-    ViewData["Title"] = "Edit";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
-}
-<h2 class="text-info">Chỉnh sửa thông tin</h2>
-<form method="post" asp-action="Edit">
-    <div class="p-4 border rounded">
+@{ ViewData["Title"] = "Edit";
+                Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+<div class="container">
+    <h1 class="add">Edit User</h1>
+    <hr />
+    <form asp-action="Edit">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <input type="hidden" asp-for="Id" />
-        <div class="form-group row">
-            <div class="col-2">
-                <label asp-for="FullName" class="control-label"></label>
+        <div class="row">
+            <div class="col-25">
+                <label asp-for="FullName" class="label-form"></label>
             </div>
-            <div class="col-10">
-                <input asp-for="FullName" class="form-control" />
+            <div class="col-75">
+                <input asp-for="FullName" class="input-form" type="text" placeholder="ProductName..">
             </div>
-            <span asp-validation-for="FullName" class="text-danger"></span>
         </div>
-        <div class="form-group row">
-            <div class="col-2">
-                <label asp-for="Email" class="control-label"></label>
-            </div>
-            <div class="col-10">
-                <input asp-for="Email" readonly class="form-control" />
-            </div>
-            <span asp-validation-for="Email" class="text-danger"></span>
+        <div class="row">
+            <input class="submit-form" type="submit" value="Save">
         </div>
-        <div class="form-group text-center">
-            <input type="submit" class="btn btn-primary" value="Cập nhật" />
-            <a asp-action="Index" class="btn btn-success">Quay về</a>
-        </div>
+        @if (ViewBag.Status == 1)
+        {
+<p class="text-warning">Record saved </p>}
+    </form>
+    <div class="back">
+        <a class="button-edit" asp-action="Index">Back</a>
     </div>
-</form>
+</div>
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

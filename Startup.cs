@@ -1,6 +1,8 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -31,7 +33,7 @@ namespace Webtt
             services.AddControllersWithViews();
             services.AddSession();
             services.AddRazorPages();
-            services.AddDbContext<DataContext>(options =>
+            services.AddDbContextPool<DataContext>(options =>
 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAutoMapper(typeof(Startup));
             services.AddIdentity<User, IdentityRole>
@@ -44,7 +46,8 @@ options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 
                }).AddEntityFrameworkStores<DataContext>().AddDefaultUI().AddDefaultTokenProviders(); ;
-        }
+        }      
+       
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -61,7 +64,7 @@ options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseCookiePolicy();
 
             app.UseRouting();
             app.UseAuthentication();

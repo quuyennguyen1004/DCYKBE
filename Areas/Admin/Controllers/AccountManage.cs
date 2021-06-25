@@ -50,8 +50,7 @@ namespace Webtt.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 User userFromDb = _context.Users.Where(b => b.Id == id).FirstOrDefault();
-                userFromDb.UserName = applicationUser.UserName;
-                userFromDb.PhoneNumber = applicationUser.PhoneNumber;
+                userFromDb.FullName = applicationUser.FullName;
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
